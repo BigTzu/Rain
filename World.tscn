@@ -1,9 +1,23 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://src/Tilemap/tileset_mk_16_16_nature_tileset_godot.tres" type="TileSet" id=1]
 [ext_resource path="res://Player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://assets/Backgrounds/PixelatedForest/Layers/Layer_0011_0.png" type="Texture" id=3]
+[ext_resource path="res://World.gd" type="Script" id=4]
+[ext_resource path="res://assets/Backgrounds/PixelatedForest/Layers/Layer_0005_5.png" type="Texture" id=5]
+[ext_resource path="res://assets/Backgrounds/PixelatedForest/Layers/Layer_0002_7.png" type="Texture" id=6]
+[ext_resource path="res://assets/Backgrounds/PixelatedForest/Layers/Layer_0000_9.png" type="Texture" id=7]
+[ext_resource path="res://assets/Backgrounds/PixelatedForest/Layers/Layer_0004_Lights.png" type="Texture" id=8]
+[ext_resource path="res://assets/Backgrounds/PixelatedForest/Layers/Layer_0003_6.png" type="Texture" id=9]
+[ext_resource path="res://assets/Backgrounds/PixelatedForest/Layers/Layer_0001_8.png" type="Texture" id=10]
+[ext_resource path="res://assets/Backgrounds/PixelatedForest/Layers/Layer_0010_1.png" type="Texture" id=11]
+[ext_resource path="res://assets/Backgrounds/PixelatedForest/Layers/Layer_0009_2.png" type="Texture" id=12]
+[ext_resource path="res://assets/Backgrounds/PixelatedForest/Layers/Layer_0008_3.png" type="Texture" id=13]
+[ext_resource path="res://assets/Backgrounds/PixelatedForest/Layers/Layer_0007_Lights.png" type="Texture" id=14]
+[ext_resource path="res://assets/Backgrounds/PixelatedForest/Layers/Layer_0006_4.png" type="Texture" id=15]
 
 [node name="World" type="Node2D"]
+script = ExtResource( 4 )
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
 
@@ -11,4 +25,127 @@
 tile_set = ExtResource( 1 )
 cell_size = Vector2( 16, 16 )
 format = 1
-tile_data = PoolIntArray( -524264, 0, 1, -524263, 0, 2, -524262, 0, 2, -524261, 0, 3, -458729, 0, 1, -458728, 0, 131079, -458727, 0, 65538, -458726, 0, 65538, -458725, 0, 65539, -393193, 0, 65537, -393192, 0, 65538, -393191, 0, 65538, -393190, 0, 65538, -393189, 0, 65539, -327657, 0, 65537, -327656, 0, 65538, -327655, 0, 65538, -327654, 0, 65538, -327653, 0, 65539, -262121, 0, 65537, -262120, 0, 65538, -262119, 0, 65538, -262118, 0, 65538, -262117, 0, 65539, -131086, 0, 1, -131085, 0, 2, -131084, 0, 2, -131083, 0, 2, -131082, 0, 2, -131081, 0, 3, -196585, 0, 65537, -196584, 0, 65538, -196583, 0, 65538, -196582, 0, 65538, -196581, 0, 65539, -65550, 0, 65537, -65549, 0, 65538, -65548, 0, 65538, -65547, 0, 65538, -65546, 0, 65538, -65545, 0, 65539, -131055, 0, 1, -131054, 0, 2, -131053, 0, 2, -131052, 0, 2, -131051, 0, 2, -131050, 0, 2, -131049, 0, 131079, -131048, 0, 65538, -131047, 0, 65538, -131046, 0, 65538, -131045, 0, 65539, -15, 0, 196609, -14, 0, 262151, -13, 0, 65538, -12, 0, 65538, -11, 0, 65538, -10, 0, 65538, -9, 0, 65539, -65529, 0, 1, -65528, 0, 2, -65527, 0, 2, -65526, 0, 2, -65525, 0, 3, -65521, 0, 1, -65520, 0, 2, -65519, 0, 131079, -65518, 0, 65538, -65517, 0, 65538, -65516, 0, 65538, -65515, 0, 65538, -65514, 0, 65538, -65513, 0, 65538, -65512, 0, 65538, -65511, 0, 65538, -65510, 0, 65538, -65509, 0, 65539, 65522, 0, 65537, 65523, 0, 65538, 65524, 0, 65538, 65525, 0, 65538, 65526, 0, 65538, 65527, 0, 65539, 4, 0, 1, 5, 0, 2, 6, 0, 2, 7, 0, 131079, 8, 0, 65538, 9, 0, 65538, 10, 0, 65538, 11, 0, 131078, 12, 0, 2, 13, 0, 2, 14, 0, 2, 15, 0, 131079, 16, 0, 65538, 17, 0, 65538, 18, 0, 65538, 19, 0, 65538, 20, 0, 65538, 21, 0, 65538, 22, 0, 65538, 23, 0, 65538, 24, 0, 65538, 25, 0, 65538, 26, 0, 65538, 27, 0, 65539, 131058, 0, 65537, 131059, 0, 65538, 131060, 0, 65538, 131061, 0, 65538, 131062, 0, 65538, 131063, 0, 131078, 131064, 0, 2, 131065, 0, 2, 131066, 0, 2, 131067, 0, 2, 131068, 0, 2, 131069, 0, 2, 131070, 0, 2, 131071, 0, 2, 65536, 0, 2, 65537, 0, 2, 65538, 0, 2, 65539, 0, 2, 65540, 0, 131079, 65541, 0, 65538, 65542, 0, 65538, 65543, 0, 65538, 65544, 0, 65538, 65545, 0, 65538, 65546, 0, 65538, 65547, 0, 65538, 65548, 0, 65538, 65549, 0, 65538, 65550, 0, 65538, 65551, 0, 65538, 65552, 0, 65538, 65553, 0, 65538, 65554, 0, 65538, 65555, 0, 65538, 65556, 0, 65538, 65557, 0, 65538, 65558, 0, 65538, 65559, 0, 65538, 65560, 0, 65538, 65561, 0, 65538, 65562, 0, 65538, 65563, 0, 65539, 196594, 0, 65537, 196595, 0, 65538, 196596, 0, 65538, 196597, 0, 65538, 196598, 0, 65538, 196599, 0, 65538, 196600, 0, 65538, 196601, 0, 65538, 196602, 0, 65538, 196603, 0, 65538, 196604, 0, 65538, 196605, 0, 65538, 196606, 0, 65538, 196607, 0, 65538, 131072, 0, 65538, 131073, 0, 65538, 131074, 0, 65538, 131075, 0, 65538, 131076, 0, 65538, 131077, 0, 65538, 131078, 0, 65538, 131079, 0, 65538, 131080, 0, 65538, 131081, 0, 65538, 131082, 0, 65538, 131083, 0, 65538, 131084, 0, 65538, 131085, 0, 65538, 131086, 0, 65538, 131087, 0, 65538, 131088, 0, 65538, 131089, 0, 65538, 131090, 0, 65538, 131091, 0, 65538, 131092, 0, 65538, 131093, 0, 65538, 131094, 0, 65538, 131095, 0, 65538, 131096, 0, 65538, 131097, 0, 65538, 131098, 0, 65538, 131099, 0, 65539, 262130, 0, 65537, 262131, 0, 65538, 262132, 0, 65538, 262133, 0, 65538, 262134, 0, 65538, 262135, 0, 65538, 262136, 0, 65538, 262137, 0, 65538, 262138, 0, 65538, 262139, 0, 65538, 262140, 0, 65538, 262141, 0, 65538, 262142, 0, 65538, 262143, 0, 65538, 196608, 0, 65538, 196609, 0, 65538, 196610, 0, 65538, 196611, 0, 65538, 196612, 0, 65538, 196613, 0, 65538, 196614, 0, 65538, 196615, 0, 65538, 196616, 0, 65538, 196617, 0, 65538, 196618, 0, 65538, 196619, 0, 65538, 196620, 0, 65538, 196621, 0, 65538, 196622, 0, 65538, 196623, 0, 65538, 196624, 0, 65538, 196625, 0, 65538, 196626, 0, 65538, 196627, 0, 65538, 196628, 0, 65538, 196629, 0, 65538, 196630, 0, 65538, 196631, 0, 65538, 196632, 0, 65538, 196633, 0, 65538, 196634, 0, 65538, 196635, 0, 65539, 327666, 0, 65537, 327667, 0, 65538, 327668, 0, 65538, 327669, 0, 65538, 327670, 0, 65538, 327671, 0, 65538, 327672, 0, 65538, 327673, 0, 65538, 327674, 0, 65538, 327675, 0, 65538, 327676, 0, 65538, 327677, 0, 65538, 327678, 0, 65538, 327679, 0, 65538, 262144, 0, 65538, 262145, 0, 65538, 262146, 0, 65538, 262147, 0, 65538, 262148, 0, 65538, 262149, 0, 65538, 262150, 0, 65538, 262151, 0, 65538, 262152, 0, 65538, 262153, 0, 65538, 262154, 0, 65538, 262155, 0, 65538, 262156, 0, 65538, 262157, 0, 65538, 262158, 0, 65538, 262159, 0, 65538, 262160, 0, 65538, 262161, 0, 65538, 262162, 0, 65538, 262163, 0, 65538, 262164, 0, 65538, 262165, 0, 65538, 262166, 0, 65538, 262167, 0, 65538, 262168, 0, 65538, 262169, 0, 65538, 262170, 0, 65538, 262171, 0, 65539, 393202, 0, 65537, 393203, 0, 65538, 393204, 0, 65538, 393205, 0, 65538, 393206, 0, 65538, 393207, 0, 65538, 393208, 0, 65538, 393209, 0, 65538, 393210, 0, 65538, 393211, 0, 65538, 393212, 0, 65538, 393213, 0, 65538, 393214, 0, 65538, 393215, 0, 65538, 327680, 0, 65538, 327681, 0, 65538, 327682, 0, 65538, 327683, 0, 65538, 327684, 0, 65538, 327685, 0, 65538, 327686, 0, 65538, 327687, 0, 65538, 327688, 0, 65538, 327689, 0, 65538, 327690, 0, 65538, 327691, 0, 65538, 327692, 0, 65538, 327693, 0, 65538, 327694, 0, 65538, 327695, 0, 65538, 327696, 0, 65538, 327697, 0, 65538, 327698, 0, 65538, 327699, 0, 65538, 327700, 0, 65538, 327701, 0, 65538, 327702, 0, 65538, 327703, 0, 65538, 327704, 0, 65538, 327705, 0, 65538, 327706, 0, 65538, 327707, 0, 65539, 458738, 0, 65537, 458739, 0, 65538, 458740, 0, 65538, 458741, 0, 65538, 458742, 0, 65538, 458743, 0, 65538, 458744, 0, 65538, 458745, 0, 65538, 458746, 0, 65538, 458747, 0, 65538, 458748, 0, 65538, 458749, 0, 65538, 458750, 0, 65538, 458751, 0, 65538, 393216, 0, 65538, 393217, 0, 65538, 393218, 0, 65538, 393219, 0, 65538, 393220, 0, 65538, 393221, 0, 65538, 393222, 0, 65538, 393223, 0, 65538, 393224, 0, 65538, 393225, 0, 65538, 393226, 0, 65538, 393227, 0, 65538, 393228, 0, 65538, 393229, 0, 65538, 393230, 0, 65538, 393231, 0, 65538, 393232, 0, 65538, 393233, 0, 65538, 393234, 0, 65538, 393235, 0, 65538, 393236, 0, 65538, 393237, 0, 65538, 393238, 0, 65538, 393239, 0, 65538, 393240, 0, 65538, 393241, 0, 65538, 393242, 0, 65538, 393243, 0, 65539, 524274, 0, 65537, 524275, 0, 65538, 524276, 0, 65538, 524277, 0, 65538, 524278, 0, 65538, 524279, 0, 65538, 524280, 0, 65538, 524281, 0, 65538, 524282, 0, 65538, 524283, 0, 65538, 524284, 0, 65538, 524285, 0, 65538, 524286, 0, 65538, 524287, 0, 65538, 458752, 0, 65538, 458753, 0, 65538, 458754, 0, 65538, 458755, 0, 65538, 458756, 0, 65538, 458757, 0, 65538, 458758, 0, 65538, 458759, 0, 65538, 458760, 0, 65538, 458761, 0, 65538, 458762, 0, 65538, 458763, 0, 65538, 458764, 0, 65538, 458765, 0, 65538, 458766, 0, 65538, 458767, 0, 65538, 458768, 0, 65538, 458769, 0, 65538, 458770, 0, 65538, 458771, 0, 65538, 458772, 0, 65538, 458773, 0, 65538, 458774, 0, 65538, 458775, 0, 65538, 458776, 0, 65538, 458777, 0, 65538, 458778, 0, 65542, 458779, 0, 131075, 589810, 0, 131073, 589811, 0, 131074, 589812, 0, 131074, 589813, 0, 131074, 589814, 0, 131074, 589815, 0, 131074, 589816, 0, 131074, 589817, 0, 131074, 589818, 0, 131074, 589819, 0, 131074, 589820, 0, 131074, 589821, 0, 131074, 589822, 0, 131074, 589823, 0, 131074, 524288, 0, 131074, 524289, 0, 131074, 524290, 0, 131074, 524291, 0, 131074, 524292, 0, 131074, 524293, 0, 131074, 524294, 0, 131074, 524295, 0, 131074, 524296, 0, 131074, 524297, 0, 131074, 524298, 0, 131074, 524299, 0, 131074, 524300, 0, 131074, 524301, 0, 131074, 524302, 0, 131074, 524303, 0, 131074, 524304, 0, 131074, 524305, 0, 131074, 524306, 0, 131074, 524307, 0, 131074, 524308, 0, 131074, 524309, 0, 131074, 524310, 0, 131074, 524311, 0, 131074, 524312, 0, 131074, 524313, 0, 131074, 524314, 0, 131075 )
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="Layer_11" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2( 0, 1 )
+motion_mirroring = Vector2( 464, 0 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/Layer_11"]
+position = Vector2( 0, -272 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 3 )
+centered = false
+
+[node name="Layer_10" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2( 0.1, 1 )
+motion_mirroring = Vector2( 464, 0 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/Layer_10"]
+position = Vector2( 0, -272 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 11 )
+centered = false
+
+[node name="Layer_09" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2( 0.2, 1 )
+motion_mirroring = Vector2( 464, 0 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/Layer_09"]
+position = Vector2( 0, -272 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 12 )
+centered = false
+
+[node name="Layer_08" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2( 0.3, 1 )
+motion_mirroring = Vector2( 464, 0 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/Layer_08"]
+position = Vector2( 0, -272 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 13 )
+centered = false
+
+[node name="Layer_07" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2( 0.4, 1 )
+motion_mirroring = Vector2( 464, 0 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/Layer_07"]
+position = Vector2( 0, -272 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 14 )
+centered = false
+
+[node name="Layer_06" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2( 0.5, 1 )
+motion_mirroring = Vector2( 464, 0 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/Layer_06"]
+position = Vector2( 0, -272 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 15 )
+centered = false
+
+[node name="Layer_05" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2( 0.6, 1 )
+motion_mirroring = Vector2( 464, 0 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/Layer_05"]
+position = Vector2( 0, -272 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 5 )
+centered = false
+
+[node name="Layer_04" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2( 0.7, 1 )
+motion_mirroring = Vector2( 464, 0 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/Layer_04"]
+position = Vector2( 0, -272 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 8 )
+centered = false
+
+[node name="Layer_03" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2( 0.8, 1 )
+motion_mirroring = Vector2( 464, 0 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/Layer_03"]
+position = Vector2( 0, -272 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 9 )
+centered = false
+
+[node name="Layer_02" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2( 0.9, 1 )
+motion_mirroring = Vector2( 464, 0 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/Layer_02"]
+position = Vector2( 0, -272 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 6 )
+centered = false
+
+[node name="Layer_01" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2( 464, 0 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/Layer_01"]
+position = Vector2( 0, -272 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 10 )
+centered = false
+
+[node name="ParallaxBackground2" type="ParallaxBackground" parent="."]
+layer = 1
+
+[node name="Layer_00" type="ParallaxLayer" parent="ParallaxBackground2"]
+motion_scale = Vector2( 2, 1 )
+motion_mirroring = Vector2( 464, 0 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground2/Layer_00"]
+position = Vector2( 0, -272 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 7 )
+centered = false
