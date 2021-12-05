@@ -58,3 +58,6 @@ func player_movement():
 		elif motion.y > 0:
 			state_machine.travel("fall")
 	motion = move_and_slide(motion, UP)
+
+func die():
+	queue_free()
