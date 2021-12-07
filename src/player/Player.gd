@@ -7,8 +7,11 @@ const MAXSPEED = 120
 const JUMPFORCE = 300
 const ACCEL = 10
 
+export (int) var damage := 10
+
 var motion = Vector2.ZERO
 var is_attacking = false
+var change_direction = false
 onready var state_machine = $AnimationTree.get("parameters/playback")
 
 func _process(delta):
@@ -28,7 +31,6 @@ func player_movement():
 	
 	motion.x =  clamp(motion.x, -MAXSPEED, MAXSPEED)
 	
-	
 	if Input.is_action_just_pressed("attack") and is_animation_attack_possible(current):
 		state_machine.travel("attack1")
 		return
@@ -37,10 +39,14 @@ func player_movement():
 		return
 	if Input.is_action_pressed("right"):
 		motion.x += ACCEL
-		$Sprite.flip_h = false
+		if $Sprite.flip_h != false:
+			$Sprite.flip_h = false
+			$Area2D/HitCollision.position.x *= -1
 	elif Input.is_action_pressed("left"):
 		motion.x -= ACCEL
-		$Sprite.flip_h = true
+		if $Sprite.flip_h != true:
+			$Sprite.flip_h = true
+			$Area2D/HitCollision.position.x *= -1
 	else:
 		motion.x = lerp(motion.x, 0, 0.2)
 		state_machine.travel("idle")
@@ -61,3 +67,8 @@ func player_movement():
 
 func die():
 	queue_free()
+
+
+func _on_Area2D_body_entered(body: Node) -> void:
+	if body.has_method("handle_hit"):
+		body.handle_hit(damage)
