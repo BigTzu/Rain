@@ -1,0 +1,116 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://assets/Backgrounds/Forest_Light/BG02.png" type="Texture" id=1]
+[ext_resource path="res://src/Tilemap/Level_2/Level2_Tilemap.tres" type="TileSet" id=2]
+[ext_resource path="res://assets/Backgrounds/Forest_Light/BG03.png" type="Texture" id=3]
+[ext_resource path="res://assets/Backgrounds/Forest_Light/BG04.png" type="Texture" id=4]
+[ext_resource path="res://src/player/Player.tscn" type="PackedScene" id=5]
+[ext_resource path="res://src/Tilemap/Level_2/Building.tres" type="TileSet" id=6]
+[ext_resource path="res://src/Tilemap/Level_2/Decor.tres" type="TileSet" id=7]
+
+[node name="Level_2" type="Node2D"]
+
+[node name="Parallax_Background_L1" type="ParallaxBackground" parent="."]
+
+[node name="Layer1" type="ParallaxLayer" parent="Parallax_Background_L1"]
+motion_mirroring = Vector2( 667, 0 )
+
+[node name="Sprite" type="Sprite" parent="Parallax_Background_L1/Layer1"]
+position = Vector2( -218, 0 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 4 )
+centered = false
+
+[node name="Layer_2" type="ParallaxLayer" parent="Parallax_Background_L1"]
+motion_scale = Vector2( 0.9, 1 )
+motion_mirroring = Vector2( 667, 0 )
+
+[node name="Sprite" type="Sprite" parent="Parallax_Background_L1/Layer_2"]
+position = Vector2( -218, 0 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 3 )
+centered = false
+
+[node name="Layer_3" type="ParallaxLayer" parent="Parallax_Background_L1"]
+motion_scale = Vector2( 0.8, 1 )
+motion_mirroring = Vector2( 667, 0 )
+
+[node name="Sprite" type="Sprite" parent="Parallax_Background_L1/Layer_3"]
+position = Vector2( -218, 0 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 1 )
+centered = false
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = ExtResource( 2 )
+cell_size = Vector2( 32, 32 )
+format = 1
+tile_data = PoolIntArray( 524273, 2, 0, 524274, 2, 0, 524275, 2, 0, 524276, 2, 0, 524277, 2, 0, 524278, 2, 0, 524279, 2, 0, 524280, 2, 0, 524281, 2, 0, 524282, 8, 0, 589809, 6, 0, 589810, 6, 0, 589811, 6, 0, 589812, 6, 0, 589813, 6, 0, 589814, 6, 0, 589815, 6, 0, 589816, 6, 0, 589817, 6, 0, 589818, 12, 0, 655345, 6, 0, 655346, 6, 0, 655347, 6, 0, 655348, 6, 0, 655349, 6, 0, 655350, 6, 0, 655351, 6, 0, 655352, 6, 0, 655353, 6, 0, 655354, 12, 0, 589831, 1, 0, 589832, 2, 0, 589833, 3, 0, 589838, 4, 0, 589839, 2, 0, 589840, 8, 0, 720881, 6, 0, 720882, 6, 0, 720883, 6, 0, 720884, 6, 0, 720885, 6, 0, 720886, 6, 0, 720887, 6, 0, 720888, 6, 0, 720889, 6, 0, 720890, 7, 0, 720891, 2, 0, 720892, 2, 0, 720893, 2, 0, 720894, 0, 0, 720895, 11, 0, 655360, 2, 0, 655361, 2, 0, 655362, 2, 0, 655363, 0, 0, 655364, 11, 0, 655365, 2, 0, 655366, 2, 0, 655367, 5, 0, 655368, 6, 0, 655369, 7, 0, 655370, 2, 0, 655371, 2, 0, 655372, 8, 0, 786417, 6, 0, 786418, 6, 0, 786419, 6, 0, 786420, 6, 0, 786421, 6, 0, 786422, 6, 0, 786423, 6, 0, 786424, 6, 0, 786425, 6, 0, 786426, 6, 0, 786427, 6, 0, 786428, 6, 0, 786429, 6, 0, 786430, 6, 0, 786431, 6, 0, 720896, 6, 0, 720897, 6, 0, 720898, 6, 0, 720899, 6, 0, 720900, 6, 0, 720901, 6, 0, 720902, 6, 0, 720903, 6, 0, 720904, 6, 0, 720905, 6, 0, 720906, 6, 0, 720907, 6, 0, 720908, 12, 0 )
+
+[node name="Layer7" type="TileMap" parent="."]
+visible = false
+tile_set = ExtResource( 6 )
+cell_size = Vector2( 4, 4 )
+cell_custom_transform = Transform2D( 4, 0, 0, 4, 0, 0 )
+format = 1
+
+[node name="BuildingTileMap" type="Node2D" parent="."]
+
+[node name="Building" type="TileMap" parent="BuildingTileMap"]
+tile_set = ExtResource( 6 )
+cell_size = Vector2( 8, 8 )
+cell_custom_transform = Transform2D( 8, 0, 0, 8, 0, 0 )
+format = 1
+tile_data = PoolIntArray( 786383, 36, 0, 786395, 35, 0, 1114065, 43, 0, 1114069, 44, 0, 1114081, 45, 0, 1310678, 55, 0, 1310691, 3, 0, 1310704, 41, 0, 1310716, 41, 0, 1376221, 14, 0, 1900528, 47, 0, 1900540, 47, 0, 1966097, 57, 0, 2031630, 23, 0, 2162680, 536870964, 0 )
+
+[node name="Layer1" type="TileMap" parent="BuildingTileMap"]
+tile_set = ExtResource( 6 )
+cell_size = Vector2( 4, 4 )
+cell_custom_transform = Transform2D( 4, 0, 0, 4, 0, 0 )
+format = 1
+tile_data = PoolIntArray( 2162650, 536870918, 0, 2359206, 58, 0, 2359219, 58, 0, 2359312, 9, 0, 2555830, 1, 0, 2686938, 536870917, 0, 3080208, 28, 0, 3211226, 536870917, 0, 3735514, 536870917, 0, 3997666, 23, 0, 3997672, 22, 0, 3932161, 23, 0, 3932167, 22, 0, 3932177, 58, 0, 4259802, 536870917, 0, 4784090, 536870917, 0 )
+
+[node name="Decor1" type="TileMap" parent="BuildingTileMap"]
+tile_set = ExtResource( 7 )
+cell_size = Vector2( 4, 4 )
+cell_custom_transform = Transform2D( 4, 0, 0, 4, 0, 0 )
+format = 1
+tile_data = PoolIntArray( 2621349, 13, 0, 2686862, 17, 0, 2686920, 0, 0, 4194368, 22, 0, 4194424, 37, 0, 4194432, 21, 0, 4259856, 2, 0, 4259863, 41, 0, 4718600, 4, 0, 4718607, 39, 0, 4718615, 40, 0, 4784217, 28, 0, 5046358, 30, 0 )
+
+[node name="Layer3" type="TileMap" parent="BuildingTileMap"]
+tile_set = ExtResource( 6 )
+cell_size = Vector2( 4, 4 )
+cell_custom_transform = Transform2D( 4, 0, 0, 4, 0, 0 )
+format = 1
+tile_data = PoolIntArray( 2228143, 25, 0, 2228150, 25, 0, 2424785, 536870921, 0, 3997663, 57, 0, 3997671, 57, 0, 3932166, 57, 0, 3932174, 57, 0 )
+
+[node name="Layer2" type="TileMap" parent="BuildingTileMap"]
+tile_set = ExtResource( 6 )
+cell_size = Vector2( 4, 4 )
+cell_custom_transform = Transform2D( 4, 0, 0, 4, 0, 0 )
+format = 1
+tile_data = PoolIntArray( 1900508, 536870941, 0, 1900512, 536870940, 0, 1900536, 536870940, 0, 1835021, 29, 0, 2818015, 58, 0, 2818033, 58, 0, 2818046, 58, 0, 2883568, 57, 0, 2883580, 57, 0, 3014644, 10, 0, 3997680, 0, 0 )
+
+[node name="Layer4" type="TileMap" parent="BuildingTileMap"]
+tile_set = ExtResource( 6 )
+cell_size = Vector2( 4, 4 )
+cell_custom_transform = Transform2D( 4, 0, 0, 4, 0, 0 )
+format = 1
+tile_data = PoolIntArray( 2490337, 8, 0, 2490367, 8, 0, 2686958, 24, 0, 2686970, 24, 0, 2949088, 31, 0, 2949112, 30, 0, 3145701, 56, 0, 3080195, 56, 0, 3473396, 12, 0, 3932128, 58, 0, 3932143, 58, 0, 3932157, 58, 0 )
+
+[node name="Decor2" type="TileMap" parent="BuildingTileMap"]
+tile_set = ExtResource( 7 )
+cell_size = Vector2( 4, 4 )
+cell_custom_transform = Transform2D( 4, 0, 0, 4, 0, 0 )
+format = 1
+tile_data = PoolIntArray( 3669985, 35, 0, 4128888, 18, 0 )
+
+[node name="Layer5" type="TileMap" parent="BuildingTileMap"]
+tile_set = ExtResource( 6 )
+cell_size = Vector2( 4, 4 )
+cell_custom_transform = Transform2D( 4, 0, 0, 4, 0, 0 )
+format = 1
+tile_data = PoolIntArray( 3801053, 24, 0, 3801068, 24, 0, 3801081, 24, 0, 3735556, 24, 0, 3735564, 24, 0 )
+
+[node name="Player" parent="." instance=ExtResource( 5 )]
+position = Vector2( -4, 122 )
