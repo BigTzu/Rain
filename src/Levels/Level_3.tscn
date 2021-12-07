@@ -8,7 +8,7 @@
 [ext_resource path="res://src/player/Player.tscn" type="PackedScene" id=6]
 [ext_resource path="res://src/Tilemap/Level_3/Decor.tres" type="TileSet" id=7]
 
-[node name="Node2D" type="Node2D"]
+[node name="Level_3" type="Node2D"]
 
 [node name="Parallax_Background_L1" type="ParallaxBackground" parent="."]
 

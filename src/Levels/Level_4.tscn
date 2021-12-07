@@ -10,7 +10,7 @@
 [ext_resource path="res://src/Tilemap/Level_4/Tiles.tres" type="TileSet" id=8]
 [ext_resource path="res://src/Tilemap/Level_4/Decor.tres" type="TileSet" id=9]
 
-[node name="Node2D" type="Node2D"]
+[node name="Level_4" type="Node2D"]
 
 [node name="Parallax_Background_L1" type="ParallaxBackground" parent="."]
 
