@@ -4,7 +4,7 @@ Content: Bottom HUD Script.
 """
 extends Panel
 
-var ChoiceUser = 2
+export var ChoiceUser = 0
 var ExpBarValue = 0
 
 # Weapon texture path
@@ -19,6 +19,7 @@ const ThunderElementPath = "res://assets/HUD/Elements/Thunder.png"
 const WindElementPath = "res://assets/HUD/Elements/Wind.png"
 
 func _ready():
+	$Weapon.texture = load(SwordPath)
 	pass
 
 # Handle the input of keyboard

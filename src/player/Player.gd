@@ -16,6 +16,8 @@ var is_attacking = false
 var change_direction = false
 onready var state_machine = $AnimationTree.get("parameters/playback")
 
+const ARROW = preload("res://src/player/Arrow.tscn")
+
 func _process(delta):
 	player_movement()
 
@@ -25,7 +27,15 @@ func is_animation_attack_possible(current):
 	else:
 		return true
 
+func shot_arrow():
+	var arrow = ARROW.instance()
+	arrow.set_arrow_direction(sign($Position2D.position.x))
+	get_parent().add_child(arrow)
+	arrow.position = $Position2D.global_position
+
 func player_movement():
+	var weapon = $HUD/Bottom.ChoiceUser
+	
 	if is_dead == true:
 		return
 	var current = state_machine.get_current_node()
@@ -36,7 +46,12 @@ func player_movement():
 	motion.x =  clamp(motion.x, -MAXSPEED, MAXSPEED)
 	
 	if Input.is_action_just_pressed("attack") and is_animation_attack_possible(current):
-		state_machine.travel("attack1")
+		if weapon == 0:
+			state_machine.travel("attack1")
+		elif weapon == 1:
+			state_machine.travel("attack_glove")
+		elif weapon == 2:
+			state_machine.travel("attack_archer")
 		return
 	if Input.is_action_just_pressed("big_attack") and is_animation_attack_possible(current):
 		state_machine.travel("attack2 2")
@@ -46,11 +61,15 @@ func player_movement():
 		if $Sprite.flip_h != false:
 			$Sprite.flip_h = false
 			$Area2D/HitCollision.position.x *= -1
+		if sign($Position2D.position.x) == -1:
+			$Position2D.position.x *= -1
 	elif Input.is_action_pressed("left"):
 		motion.x -= ACCEL
 		if $Sprite.flip_h != true:
 			$Sprite.flip_h = true
 			$Area2D/HitCollision.position.x *= -1
+		if sign($Position2D.position.x) == 1:
+			$Position2D.position.x *= -1
 	else:
 		motion.x = lerp(motion.x, 0, 0.2)
 		state_machine.travel("idle")
