@@ -8,6 +8,7 @@ var velocity = Vector2()
 var is_moving_right = false
 
 export (int) var health := 30
+export (int) var damage := 10
 
 var direction = 1
 
@@ -60,7 +61,8 @@ func _on_PlayerDetector_body_entered(body: Node) -> void:
 		$AnimationPlayer.play("Attack")
 	
 func _on_AtackDetector_body_entered(body: Node) -> void:
-	get_tree().reload_current_scene()
+	if body.has_method("handle_hit_player"):
+		body.handle_hit_player(damage)
 ##   FOLLOW PLAYER AI
 
 # const WALK_SPEED = 100

@@ -8,7 +8,9 @@ const JUMPFORCE = 300
 const ACCEL = 10
 
 export (int) var damage := 10
+export (int) var health := 30
 
+var is_dead = false
 var motion = Vector2.ZERO
 var is_attacking = false
 var change_direction = false
@@ -24,6 +26,8 @@ func is_animation_attack_possible(current):
 		return true
 
 func player_movement():
+	if is_dead == true:
+		return
 	var current = state_machine.get_current_node()
 	motion.y += GRAVITY
 	if motion.y > MAXFALLSPEED:
@@ -65,9 +69,18 @@ func player_movement():
 			state_machine.travel("fall")
 	motion = move_and_slide(motion, UP)
 
-func die():
-	queue_free()
+func dead():
+	motion = Vector2(0, 0)
+	$AnimationTree.active = false
+	$AnimationPlayer.play("Death")
+	is_dead = true
 
+func handle_hit_player(damage):
+	health -= damage
+	$AnimationPlayer.play("Hit")
+	print("enemy was hit, current health: " + str(health))
+	if health <= 0:
+		dead()
 
 func _on_Area2D_body_entered(body: Node) -> void:
 	if body.has_method("handle_hit"):
