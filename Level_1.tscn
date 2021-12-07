@@ -1,6 +1,6 @@
 [gd_scene load_steps=17 format=2]
 
-[ext_resource path="res://Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://src/player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://src/Tilemap/Level_1/Level_1_src.tres" type="TileSet" id=2]
 [ext_resource path="res://assets/Backgrounds/Forest/2 Background/Layers/2.png" type="Texture" id=3]
 [ext_resource path="res://assets/Backgrounds/Forest/2 Background/Layers/1.png" type="Texture" id=4]
