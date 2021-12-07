@@ -1,0 +1,104 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://Scripts/BottomHUD.gd" type="Script" id=1]
+[ext_resource path="res://Scripts/UpperHUD.gd" type="Script" id=2]
+[ext_resource path="res://assets/HUD/heart.png" type="Texture" id=3]
+[ext_resource path="res://assets/HUD/Elements/Ice.png" type="Texture" id=4]
+[ext_resource path="res://assets/HUD/Weapon/Bow.png" type="Texture" id=5]
+[ext_resource path="res://assets/HUD/Bar/bg.png" type="Texture" id=6]
+[ext_resource path="res://assets/HUD/Bar/Green.png" type="Texture" id=7]
+
+[sub_resource type="StyleBoxEmpty" id=1]
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 0, 0, 0, 0.156863 )
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[node name="HUD" type="CanvasLayer"]
+
+[node name="Lives" type="Panel" parent="."]
+margin_left = 11.0
+margin_top = 14.0
+margin_right = 118.0
+margin_bottom = 46.0
+custom_styles/panel = SubResource( 1 )
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Live_1" type="TextureRect" parent="Lives"]
+margin_right = 32.0
+margin_bottom = 32.0
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Live_2" type="TextureRect" parent="Lives"]
+margin_left = 38.0
+margin_right = 70.0
+margin_bottom = 32.0
+texture = ExtResource( 3 )
+
+[node name="Live_3" type="TextureRect" parent="Lives"]
+margin_left = 75.0
+margin_right = 107.0
+margin_bottom = 32.0
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Bottom" type="Panel" parent="."]
+margin_left = 10.0
+margin_top = 505.0
+margin_right = 182.0
+margin_bottom = 592.0
+custom_styles/panel = SubResource( 2 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Weapon" type="TextureRect" parent="Bottom"]
+margin_left = 14.0
+margin_top = 3.0
+margin_right = 78.0
+margin_bottom = 67.0
+texture = ExtResource( 5 )
+
+[node name="Power" type="TextureRect" parent="Bottom"]
+margin_left = 98.0
+margin_top = 2.0
+margin_right = 162.0
+margin_bottom = 66.0
+texture = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Load_Bg" type="TextureRect" parent="Bottom"]
+margin_left = 6.0
+margin_top = 70.0
+margin_right = 165.0
+margin_bottom = 83.0
+texture = ExtResource( 6 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Exp_Bar" type="TextureRect" parent="Bottom"]
+margin_left = 8.0
+margin_top = 73.0
+margin_right = 165.0
+margin_bottom = 82.0
+texture = ExtResource( 7 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}

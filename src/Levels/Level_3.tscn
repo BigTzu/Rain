@@ -1,0 +1,61 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://src/Interface/HUD.tscn" type="PackedScene" id=1]
+[ext_resource path="res://src/Tilemap/Level_3/tilesSet.tres" type="TileSet" id=2]
+[ext_resource path="res://assets/Backgrounds/AutumnForest/Layers/Autumn Background PNG.png" type="Texture" id=3]
+[ext_resource path="res://assets/Backgrounds/AutumnForest/Layers/Autumn Sky PNG.png" type="Texture" id=4]
+[ext_resource path="res://assets/Backgrounds/AutumnForest/Layers/Autumn Trees PNG.png" type="Texture" id=5]
+[ext_resource path="res://src/player/Player.tscn" type="PackedScene" id=6]
+[ext_resource path="res://src/Tilemap/Level_3/Decor.tres" type="TileSet" id=7]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Parallax_Background_L1" type="ParallaxBackground" parent="."]
+
+[node name="Layer1" type="ParallaxLayer" parent="Parallax_Background_L1"]
+motion_mirroring = Vector2( 768, 0 )
+
+[node name="Sprite" type="Sprite" parent="Parallax_Background_L1/Layer1"]
+position = Vector2( -218, 0 )
+scale = Vector2( 0.4, 0.4 )
+texture = ExtResource( 4 )
+centered = false
+
+[node name="Layer_2" type="ParallaxLayer" parent="Parallax_Background_L1"]
+motion_scale = Vector2( 0.9, 1 )
+motion_mirroring = Vector2( 768, 0 )
+
+[node name="Sprite" type="Sprite" parent="Parallax_Background_L1/Layer_2"]
+position = Vector2( -218, 0 )
+scale = Vector2( 0.4, 0.4 )
+texture = ExtResource( 3 )
+centered = false
+
+[node name="Layer_3" type="ParallaxLayer" parent="Parallax_Background_L1"]
+motion_scale = Vector2( 0.8, 1 )
+motion_mirroring = Vector2( 768, 0 )
+
+[node name="Sprite" type="Sprite" parent="Parallax_Background_L1/Layer_3"]
+position = Vector2( -218, 0 )
+scale = Vector2( 0.4, 0.4 )
+texture = ExtResource( 5 )
+centered = false
+
+[node name="Tiles" type="TileMap" parent="."]
+position = Vector2( 2, 80 )
+tile_set = ExtResource( 2 )
+cell_size = Vector2( 32, 32 )
+format = 1
+tile_data = PoolIntArray( 524278, 20, 0, 524279, 20, 0, 524280, 20, 0, 524281, 20, 0, 524282, 20, 0, 524283, 18, 0, 458762, 15, 0, 458796, 15, 0, 589814, 17, 0, 589815, 17, 0, 589816, 17, 0, 589817, 17, 0, 589818, 17, 0, 589819, 0, 0, 524296, 15, 0, 524301, 15, 0, 524309, 1, 0, 524310, 3, 0, 524311, 3, 0, 524312, 2, 0, 524314, 19, 0, 524315, 18, 0, 524322, 22, 0, 524323, 20, 0, 524324, 23, 0, 524327, 16, 0, 524346, 19, 0, 524347, 20, 0, 524348, 18, 0, 524355, 3, 0, 655350, 17, 0, 655351, 17, 0, 655352, 17, 0, 655353, 17, 0, 655354, 17, 0, 655355, 17, 0, 655356, 20, 0, 655357, 20, 0, 655358, 20, 0, 655359, 20, 0, 589824, 20, 0, 589825, 20, 0, 589826, 20, 0, 589827, 20, 0, 589828, 20, 0, 589829, 20, 0, 589830, 18, 0, 589840, 12, 0, 589841, 8, 0, 589842, 8, 0, 589843, 8, 0, 589844, 13, 0, 589850, 17, 0, 589851, 17, 0, 589852, 20, 0, 589853, 20, 0, 589854, 20, 0, 589855, 20, 0, 589856, 20, 0, 589857, 20, 0, 589858, 12, 0, 589859, 8, 0, 589860, 13, 0, 589861, 18, 0, 589871, 19, 0, 589872, 20, 0, 589873, 20, 0, 589874, 20, 0, 589875, 20, 0, 589876, 20, 0, 589877, 20, 0, 589878, 20, 0, 589879, 20, 0, 589880, 18, 0, 589882, 21, 0, 589883, 17, 0, 589884, 0, 0, 589886, 3, 0, 589887, 3, 0, 589888, 3, 0, 589889, 3, 0, 589894, 3, 0, 589895, 3, 0, 589897, 19, 0, 589898, 20, 0, 589899, 20, 0, 589900, 20, 0, 589901, 20, 0, 589902, 20, 0, 589903, 20, 0, 589904, 20, 0, 589905, 18, 0, 720886, 17, 0, 720887, 17, 0, 720888, 17, 0, 720889, 17, 0, 720890, 17, 0, 720891, 17, 0, 720892, 12, 0, 720893, 8, 0, 720894, 8, 0, 720895, 8, 0, 655360, 8, 0, 655361, 8, 0, 655362, 8, 0, 655363, 8, 0, 655364, 8, 0, 655365, 8, 0, 655366, 8, 0, 655376, 4, 0, 655377, 4, 0, 655378, 4, 0, 655379, 4, 0, 655380, 9, 0, 655386, 17, 0, 655387, 17, 0, 655388, 17, 0, 655389, 17, 0, 655390, 17, 0, 655391, 17, 0, 655392, 17, 0, 655393, 17, 0, 655394, 11, 0, 655395, 7, 0, 655396, 14, 0, 655397, 0, 0, 655407, 8, 0, 655408, 8, 0, 655409, 8, 0, 655410, 8, 0, 655411, 8, 0, 655412, 8, 0, 655413, 8, 0, 655414, 8, 0, 655415, 8, 0, 655416, 8, 0, 655418, 21, 0, 655419, 17, 0, 655420, 0, 0, 655433, 21, 0, 655434, 17, 0, 655435, 17, 0, 655436, 17, 0, 655437, 17, 0, 655438, 17, 0, 655439, 17, 0, 655440, 17, 0, 655441, 0, 0 )
+
+[node name="Decor" type="TileMap" parent="."]
+tile_set = ExtResource( 7 )
+cell_size = Vector2( 8, 8 )
+cell_custom_transform = Transform2D( 8, 0, 0, 8, 0, 0 )
+format = 1
+tile_data = PoolIntArray( 2293848, 13, 0, 2359564, 11, 0, 2556030, 13, 0, 2556032, 12, 0, 2556045, 5, 0, 2556113, 12, 0, 2556141, 9, 0, 2556218, 12, 0, 2621508, 11, 0, 2621673, 3, 0, 2621762, 4, 0, 2818038, 0, 0, 2752531, 10, 0, 2818119, 9, 0, 2818122, 8, 0, 2818162, 2, 0, 2818243, 8, 0, 2818257, 9, 0, 2818261, 8, 0, 2818270, 7, 0, 2818344, 2, 0, 2818347, 5, 0, 2818356, 6, 0, 2949118, 3, 0, 2883777, 1, 0 )
+
+[node name="HUD" parent="." instance=ExtResource( 1 )]
+
+[node name="Player" parent="." instance=ExtResource( 6 )]
+position = Vector2( 1, 195 )
