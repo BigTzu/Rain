@@ -1,6 +1,6 @@
 [gd_scene load_steps=59 format=2]
 
-[ext_resource path="res://assets/Characters/MainCharacter/adventurer-one-sheet.png" type="Texture" id=1]
+[ext_resource path="res://assets/Characters/MainCharacter/red_adventurer-one-sheet.png" type="Texture" id=1]
 [ext_resource path="res://src/player/Player.gd" type="Script" id=2]
 [ext_resource path="res://Scripts/BottomHUD.gd" type="Script" id=3]
 [ext_resource path="res://Scripts/UpperHUD.gd" type="Script" id=4]
@@ -435,7 +435,7 @@ script = ExtResource( 2 )
 texture = ExtResource( 1 )
 hframes = 7
 vframes = 31
-frame = 3
+frame = 1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 0, 2.875 )
