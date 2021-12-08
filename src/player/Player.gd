@@ -22,7 +22,7 @@ func _process(delta):
 	player_movement()
 
 func is_animation_attack_possible(current):
-	if current == "run" or current == "jump" or current == "fall":
+	if current == "run" or current == "jump" or current == "fall" or current == "Hit":
 		return false
 	else:
 		return true
@@ -35,10 +35,9 @@ func shot_arrow():
 
 func player_movement():
 	var weapon = $HUD/Bottom.ChoiceUser
-	
-	if is_dead == true:
-		return
 	var current = state_machine.get_current_node()
+	if is_dead == true or current == "Hit":
+		return
 	motion.y += GRAVITY
 	if motion.y > MAXFALLSPEED:
 		motion.y = MAXFALLSPEED
@@ -96,7 +95,13 @@ func dead():
 
 func handle_hit_player(damage):
 	health -= damage
-	$AnimationPlayer.play("Hit")
+	state_machine.travel("Hit")
+	if health < 10:
+		$HUD/Lives/Live_1.visible = false
+	elif health < 20:
+		$HUD/Lives/Live_2.visible = false
+	else:
+		$HUD/Lives/Live_3.visible = false
 	print("enemy was hit, current health: " + str(health))
 	if health <= 0:
 		dead()

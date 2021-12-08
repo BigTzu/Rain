@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://assets/Backgrounds/Forest_Light/BG02.png" type="Texture" id=1]
 [ext_resource path="res://src/Tilemap/Level_2/Level2_Tilemap.tres" type="TileSet" id=2]
@@ -7,6 +7,9 @@
 [ext_resource path="res://src/player/Player.tscn" type="PackedScene" id=5]
 [ext_resource path="res://src/Tilemap/Level_2/Building.tres" type="TileSet" id=6]
 [ext_resource path="res://src/Tilemap/Level_2/Decor.tres" type="TileSet" id=7]
+[ext_resource path="res://src/Next_Level.tscn" type="PackedScene" id=8]
+[ext_resource path="res://src/Fall_Death.tscn" type="PackedScene" id=9]
+[ext_resource path="res://src/Enemies/Mushroom.tscn" type="PackedScene" id=10]
 
 [node name="Level_2" type="Node2D"]
 
@@ -113,4 +116,31 @@ format = 1
 tile_data = PoolIntArray( 3801053, 24, 0, 3801068, 24, 0, 3801081, 24, 0, 3735556, 24, 0, 3735564, 24, 0 )
 
 [node name="Player" parent="." instance=ExtResource( 5 )]
-position = Vector2( -4, 165 )
+position = Vector2( -120, 296 )
+
+[node name="NextLevel" parent="." instance=ExtResource( 8 )]
+position = Vector2( 1984, 288 )
+
+[node name="Fall_Death" parent="." instance=ExtResource( 9 )]
+position = Vector2( 704, 400 )
+
+[node name="Enemy" parent="." instance=ExtResource( 10 )]
+position = Vector2( 144, 288 )
+
+[node name="Enemy2" parent="." instance=ExtResource( 10 )]
+position = Vector2( 488, 256 )
+
+[node name="Enemy3" parent="." instance=ExtResource( 10 )]
+position = Vector2( 912, 288 )
+
+[node name="Enemy" parent="Enemy3" instance=ExtResource( 10 )]
+position = Vector2( -256, 32 )
+
+[node name="Enemy2" parent="Enemy3" instance=ExtResource( 10 )]
+position = Vector2( 392, -8 )
+
+[node name="Enemy3" parent="Enemy3" instance=ExtResource( 10 )]
+position = Vector2( 848, -64 )
+
+[node name="Enemy4" parent="Enemy3" instance=ExtResource( 10 )]
+position = Vector2( 1024, 0 )
