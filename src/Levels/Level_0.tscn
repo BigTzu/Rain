@@ -1,0 +1,150 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Scripts/Level_0_Animation.gd" type="Script" id=1]
+[ext_resource path="res://Scripts/AnimationText.gd" type="Script" id=2]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0.0627451, 0.0588235, 0.0588235, 1 )
+
+[node name="Story" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel" type="Panel" parent="."]
+margin_right = 1023.0
+margin_bottom = 599.0
+custom_styles/panel = SubResource( 1 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sentence_1" type="RichTextLabel" parent="Panel"]
+margin_left = 355.0
+margin_top = 293.0
+margin_right = 667.0
+margin_bottom = 324.0
+bbcode_enabled = true
+bbcode_text = "In the kingdom of Debesis is living a selfish king."
+text = "In the kingdom of Debesis is living a selfish king."
+fit_content_height = true
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sentence_2" type="RichTextLabel" parent="Panel"]
+visible = false
+margin_left = 355.0
+margin_top = 282.0
+margin_right = 667.0
+margin_bottom = 316.0
+bbcode_enabled = true
+bbcode_text = "Wishing to possess eternal life, he created a potion of immortality."
+text = "Wishing to possess eternal life, he created a potion of immortality."
+fit_content_height = true
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sentence_3" type="RichTextLabel" parent="Panel"]
+visible = false
+margin_left = 355.0
+margin_top = 265.0
+margin_right = 629.0
+margin_bottom = 314.0
+bbcode_enabled = true
+bbcode_text = "But his potion didn't work. Instead of giving eternal life, it allowed whoever drank it, to obtain powers."
+text = "But his potion didn't work. Instead of giving eternal life, it allowed whoever drank it, to obtain powers."
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sentence_4" type="RichTextLabel" parent="Panel"]
+visible = false
+margin_left = 355.0
+margin_top = 267.0
+margin_right = 667.0
+margin_bottom = 331.0
+bbcode_enabled = true
+bbcode_text = "Drinking this potion have consequence. The king who drank it was affected by excruciating pain in all his body, so much so that it was impossible for him to stand up, let alone walk."
+text = "Drinking this potion have consequence. The king who drank it was affected by excruciating pain in all his body, so much so that it was impossible for him to stand up, let alone walk."
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sentence_5" type="RichTextLabel" parent="Panel"]
+visible = false
+margin_left = 355.0
+margin_top = 266.5
+margin_right = 667.0
+margin_bottom = 331.5
+bbcode_enabled = true
+bbcode_text = "The pain was such that the king was going crazy, he could not stand it anymore. He then decided to spread the potion throughout his kingdom with the help of an artificial rain."
+text = "The pain was such that the king was going crazy, he could not stand it anymore. He then decided to spread the potion throughout his kingdom with the help of an artificial rain."
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sentence_6" type="RichTextLabel" parent="Panel"]
+visible = false
+margin_left = 355.0
+margin_top = 276.0
+margin_right = 667.0
+margin_bottom = 322.0
+bbcode_enabled = true
+bbcode_text = "All of this was done in order for someone to develop the power to heal in order to heal him."
+text = "All of this was done in order for someone to develop the power to heal in order to heal him."
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sentence_7" type="RichTextLabel" parent="Panel"]
+visible = false
+margin_left = 355.0
+margin_top = 269.0
+margin_right = 667.0
+margin_bottom = 329.0
+bbcode_enabled = true
+bbcode_text = "The inhabitants began to develop powers, but also to die. Some could not stand the effects of the potion, and their bodies eventually failed."
+text = "The inhabitants began to develop powers, but also to die. Some could not stand the effects of the potion, and their bodies eventually failed."
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sentence_8" type="RichTextLabel" parent="Panel"]
+visible = false
+margin_left = 355.0
+margin_top = 275.0
+margin_right = 667.0
+margin_bottom = 323.0
+bbcode_enabled = true
+bbcode_text = "This is where your journey begin. You incarn a young man whose artificial rain has fallen on his village."
+text = "This is where your journey begin. You incarn a young man whose artificial rain has fallen on his village."
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sentence_9" type="RichTextLabel" parent="Panel"]
+visible = false
+margin_left = 355.0
+margin_top = 259.0
+margin_right = 667.0
+margin_bottom = 338.0
+bbcode_enabled = true
+bbcode_text = "You were safe because you were on a trip when the event occurred. Nevertheless, your family ... your friends and all the people you knew were affected.  Wishing for revenge, you decided to go in search of the king."
+text = "You were safe because you were on a trip when the event occurred. Nevertheless, your family ... your friends and all the people you knew were affected.  Wishing for revenge, you decided to go in search of the king."
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
