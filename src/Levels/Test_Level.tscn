@@ -29,6 +29,7 @@ position = Vector2( 56, 80 )
 tile_set = ExtResource( 8 )
 cell_size = Vector2( 16, 16 )
 format = 1
+tile_data = PoolIntArray( -1, 0, 4, -65504, 0, 4, 65535, 0, 65540, 12, 0, 196609, 13, 0, 196610, 14, 0, 196610, 15, 0, 196610, 16, 0, 196610, 17, 0, 196610, 18, 0, 196610, 19, 0, 196610, 20, 0, 196610, 21, 0, 196610, 22, 0, 196610, 23, 0, 196611, 32, 0, 65540, 131071, 0, 65540, 65568, 0, 65540, 196607, 0, 65540, 131104, 0, 65540, 262143, 0, 65540, 196640, 0, 65540, 327679, 0, 65540, 262176, 0, 65540, 393215, 0, 65540, 327712, 0, 65540, 458751, 0, 131076, 393248, 0, 131076 )
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
@@ -155,10 +156,10 @@ texture = ExtResource( 5 )
 centered = false
 
 [node name="Enemy" parent="." instance=ExtResource( 10 )]
-position = Vector2( 352, 40 )
+position = Vector2( 288, -24 )
 
 [node name="Enemy2" parent="." instance=ExtResource( 10 )]
-position = Vector2( 560, 56 )
+position = Vector2( 464, 72 )
 
 [node name="Enemy3" parent="." instance=ExtResource( 10 )]
-position = Vector2( 240, 56 )
+position = Vector2( 208, 72 )
