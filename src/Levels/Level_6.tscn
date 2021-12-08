@@ -1,0 +1,129 @@
+[gd_scene load_steps=14 format=2]
+
+[ext_resource path="res://assets/Backgrounds/Stones/Layers/2.png" type="Texture" id=1]
+[ext_resource path="res://src/Tilemap/Level_6/Decor.tres" type="TileSet" id=2]
+[ext_resource path="res://assets/Backgrounds/Stones/Layers/6.png" type="Texture" id=3]
+[ext_resource path="res://src/Tilemap/Level_6/Tileset.tres" type="TileSet" id=4]
+[ext_resource path="res://assets/Backgrounds/Stones/Layers/7.png" type="Texture" id=5]
+[ext_resource path="res://src/player/Player.tscn" type="PackedScene" id=6]
+[ext_resource path="res://assets/Backgrounds/Stones/Layers/1.png" type="Texture" id=7]
+[ext_resource path="res://src/Next_Level.tscn" type="PackedScene" id=8]
+[ext_resource path="res://assets/Backgrounds/Stones/Layers/3.png" type="Texture" id=9]
+[ext_resource path="res://assets/Backgrounds/Stones/Layers/5.png" type="Texture" id=10]
+[ext_resource path="res://assets/Backgrounds/Stones/Layers/4.png" type="Texture" id=11]
+[ext_resource path="res://src/Fall_Death.tscn" type="PackedScene" id=12]
+[ext_resource path="res://src/Enemies/Mushroom.tscn" type="PackedScene" id=13]
+
+[node name="Level_6" type="Node2D"]
+
+[node name="Parallax_Background_L1" type="ParallaxBackground" parent="."]
+
+[node name="Layer1" type="ParallaxLayer" parent="Parallax_Background_L1"]
+motion_mirroring = Vector2( 768, 0 )
+
+[node name="Sprite" type="Sprite" parent="Parallax_Background_L1/Layer1"]
+position = Vector2( -218, 0 )
+scale = Vector2( 0.4, 0.4 )
+texture = ExtResource( 5 )
+centered = false
+
+[node name="Layer_2" type="ParallaxLayer" parent="Parallax_Background_L1"]
+motion_scale = Vector2( 0.98, 1 )
+motion_mirroring = Vector2( 768, 0 )
+
+[node name="Sprite" type="Sprite" parent="Parallax_Background_L1/Layer_2"]
+position = Vector2( -218, 0 )
+scale = Vector2( 0.4, 0.4 )
+texture = ExtResource( 3 )
+centered = false
+
+[node name="Layer_3" type="ParallaxLayer" parent="Parallax_Background_L1"]
+motion_scale = Vector2( 0.96, 1 )
+motion_mirroring = Vector2( 768, 0 )
+
+[node name="Sprite" type="Sprite" parent="Parallax_Background_L1/Layer_3"]
+position = Vector2( -218, 0 )
+scale = Vector2( 0.4, 0.4 )
+texture = ExtResource( 10 )
+centered = false
+
+[node name="Layer_4" type="ParallaxLayer" parent="Parallax_Background_L1"]
+motion_scale = Vector2( 0.94, 1 )
+motion_mirroring = Vector2( 768, 0 )
+
+[node name="Sprite" type="Sprite" parent="Parallax_Background_L1/Layer_4"]
+position = Vector2( -218, 0 )
+scale = Vector2( 0.4, 0.4 )
+texture = ExtResource( 11 )
+centered = false
+
+[node name="Layer_5" type="ParallaxLayer" parent="Parallax_Background_L1"]
+motion_scale = Vector2( 0.92, 1 )
+motion_mirroring = Vector2( 768, 0 )
+
+[node name="Sprite" type="Sprite" parent="Parallax_Background_L1/Layer_5"]
+position = Vector2( -218, 0 )
+scale = Vector2( 0.4, 0.4 )
+texture = ExtResource( 9 )
+centered = false
+
+[node name="Layer_6" type="ParallaxLayer" parent="Parallax_Background_L1"]
+motion_scale = Vector2( 0.9, 1 )
+motion_mirroring = Vector2( 768, 0 )
+
+[node name="Sprite" type="Sprite" parent="Parallax_Background_L1/Layer_6"]
+position = Vector2( -218, 0 )
+scale = Vector2( 0.4, 0.4 )
+texture = ExtResource( 1 )
+centered = false
+
+[node name="Layer_7" type="ParallaxLayer" parent="Parallax_Background_L1"]
+motion_scale = Vector2( 0.88, 1 )
+motion_mirroring = Vector2( 768, 0 )
+
+[node name="Sprite" type="Sprite" parent="Parallax_Background_L1/Layer_7"]
+position = Vector2( -218, 0 )
+scale = Vector2( 0.4, 0.4 )
+texture = ExtResource( 7 )
+centered = false
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = ExtResource( 4 )
+cell_size = Vector2( 32, 32 )
+cell_custom_transform = Transform2D( 32, 0, 0, 32, 0, 0 )
+format = 1
+tile_data = PoolIntArray( 589814, 4, 0, 589815, 4, 0, 589816, 4, 0, 589817, 4, 0, 589818, 4, 0, 589819, 4, 0, 589820, 5, 0, 655350, 7, 0, 655351, 7, 0, 655352, 7, 0, 655353, 7, 0, 655354, 7, 0, 655355, 7, 0, 655356, 8, 0, 720886, 7, 0, 720887, 7, 0, 720888, 7, 0, 720889, 7, 0, 720890, 7, 0, 720891, 7, 0, 720892, 8, 0, 655375, 25, 0, 655376, 22, 0, 655377, 22, 0, 655378, 26, 0, 655423, 21, 0, 655424, 22, 0, 655425, 22, 0, 655426, 23, 0, 786422, 7, 0, 786423, 7, 0, 786424, 7, 0, 786425, 7, 0, 786426, 7, 0, 786427, 7, 0, 786428, 8, 0, 720909, 25, 0, 720910, 26, 0, 720916, 28, 0, 720926, 3, 0, 720927, 5, 0, 720931, 0, 0, 720932, 1, 0, 720933, 1, 0, 720934, 1, 0, 720935, 2, 0, 720956, 21, 0, 720957, 22, 0, 720958, 23, 0, 851958, 7, 0, 851959, 7, 0, 851960, 7, 0, 851961, 7, 0, 851962, 7, 0, 851963, 7, 0, 851964, 11, 0, 851965, 4, 0, 851966, 4, 0, 851967, 4, 0, 786432, 4, 0, 786433, 4, 0, 786434, 4, 0, 786435, 4, 0, 786436, 4, 0, 786437, 4, 0, 786438, 4, 0, 786439, 4, 0, 786440, 4, 0, 786441, 4, 0, 786442, 4, 0, 786443, 4, 0, 786444, 5, 0, 786454, 3, 0, 786455, 4, 0, 786456, 4, 0, 786457, 4, 0, 786458, 4, 0, 786459, 4, 0, 786460, 4, 0, 786461, 4, 0, 786462, 12, 0, 786463, 11, 0, 786464, 4, 0, 786465, 4, 0, 786466, 5, 0, 786473, 0, 0, 786474, 2, 0, 786476, 0, 0, 786477, 1, 0, 786478, 2, 0, 786480, 3, 0, 786481, 4, 0, 786482, 4, 0, 786483, 4, 0, 786484, 4, 0, 786485, 4, 0, 786486, 4, 0, 786487, 4, 0, 786488, 4, 0, 786489, 4, 0, 786490, 5, 0, 786499, 21, 0, 786500, 22, 0, 786501, 23, 0, 786503, 3, 0, 786504, 5, 0, 786506, 3, 0, 786507, 4, 0, 786508, 4, 0, 786509, 4, 0, 786510, 4, 0, 786511, 4, 0, 786512, 4, 0, 786513, 4, 0, 786514, 4, 0, 786515, 4, 0, 786516, 4, 0, 786517, 4, 0, 786518, 4, 0, 786519, 4, 0, 786520, 5, 0, 917494, 7, 0, 917495, 7, 0, 917496, 7, 0, 917497, 7, 0, 917498, 7, 0, 917499, 7, 0, 917500, 7, 0, 917501, 7, 0, 917502, 7, 0, 917503, 7, 0, 851968, 7, 0, 851969, 7, 0, 851970, 7, 0, 851971, 7, 0, 851972, 7, 0, 851973, 7, 0, 851974, 7, 0, 851975, 7, 0, 851976, 7, 0, 851977, 7, 0, 851978, 7, 0, 851979, 7, 0, 851980, 8, 0, 851990, 6, 0, 851991, 7, 0, 851992, 7, 0, 851993, 7, 0, 851994, 7, 0, 851995, 7, 0, 851996, 7, 0, 851997, 7, 0, 851998, 7, 0, 851999, 7, 0, 852000, 7, 0, 852001, 7, 0, 852002, 8, 0, 852016, 6, 0, 852017, 7, 0, 852018, 7, 0, 852019, 7, 0, 852020, 7, 0, 852021, 7, 0, 852022, 7, 0, 852023, 7, 0, 852024, 7, 0, 852025, 7, 0, 852026, 8, 0, 852039, 6, 0, 852040, 8, 0, 852042, 6, 0, 852043, 7, 0, 852044, 7, 0, 852045, 7, 0, 852046, 7, 0, 852047, 7, 0, 852048, 7, 0, 852049, 7, 0, 852050, 7, 0, 852051, 7, 0, 852052, 7, 0, 852053, 7, 0, 852054, 7, 0, 852055, 7, 0, 852056, 8, 0 )
+
+[node name="Decor" type="TileMap" parent="."]
+tile_set = ExtResource( 2 )
+cell_size = Vector2( 4, 4 )
+cell_custom_transform = Transform2D( 4, 0, 0, 4, 0, 0 )
+format = 1
+tile_data = PoolIntArray( 4981261, 6, 0, 5505134, 8, 0, 5505269, 8, 0, 5571046, 5, 0, 5702328, 0, 0, 5898257, 3, 0, 5898512, 4, 0, 6029354, 6, 0, 6029382, 9, 0, 6029503, 9, 0, 6029523, 6, 0, 6029708, 8, 0, 6029732, 9, 0, 6029748, 6, 0, 6029858, 9, 0, 6029884, 8, 0, 6029915, 6, 0, 6029975, 9, 0, 6030002, 6, 0, 6030015, 8, 0, 6160377, 5, 0, 6094941, 7, 0, 6095028, 7, 0, 6095494, 5, 0, 6291704, 1, 0, 6619137, 1, 0, 6619601, 2, 0, 6684759, 2, 0, 6685247, 2, 0, 6685273, 2, 0, 6750263, 2, 0, 6750435, 2, 0, 6750604, 1, 0, 6750605, 1, 0, 6750614, 2, 0, 6750622, 1, 0, 6750857, 1, 0, 6750914, 2, 0, 6815747, 2, 0, 6815778, 1, 0, 6815947, 2, 0, 6815964, 1, 0, 6815988, 1, 0, 6816171, 1, 0, 6946796, 1, 0, 6881346, 1, 0, 6881465, 1, 0, 6881897, 1, 0, 6881914, 2, 0, 6881949, 1, 0, 6881960, 2, 0, 6947089, 1, 0, 6947259, 2, 0 )
+
+[node name="Player" parent="." instance=ExtResource( 6 )]
+position = Vector2( 32, 368 )
+
+[node name="NextLevel" parent="." instance=ExtResource( 8 )]
+position = Vector2( 2800, 376 )
+
+[node name="Fall_Death" parent="." instance=ExtResource( 12 )]
+position = Vector2( 2368, 480 )
+
+[node name="Enemy" parent="." instance=ExtResource( 13 )]
+position = Vector2( 536, 296 )
+
+[node name="Enemy2" parent="." instance=ExtResource( 13 )]
+position = Vector2( 856, 352 )
+
+[node name="Enemy3" parent="." instance=ExtResource( 13 )]
+position = Vector2( 1208, 344 )
+
+[node name="Enemy4" parent="." instance=ExtResource( 13 )]
+position = Vector2( 1720, 360 )
+
+[node name="Enemy5" parent="." instance=ExtResource( 13 )]
+position = Vector2( 2088, 296 )
+
+[node name="Enemy6" parent="." instance=ExtResource( 13 )]
+position = Vector2( 2504, 352 )
