@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://src/Next_Level.tscn" type="PackedScene" id=1]
 [ext_resource path="res://src/player/Player.tscn" type="PackedScene" id=2]
@@ -16,8 +16,11 @@
 [ext_resource path="res://assets/Backgrounds/SeamlessForest/Layers/02_Bushes.png" type="Texture" id=14]
 [ext_resource path="res://src/Fall_Death.tscn" type="PackedScene" id=15]
 [ext_resource path="res://src/Enemies/Mushroom.tscn" type="PackedScene" id=16]
+[ext_resource path="res://src/Levels/level_logic.gd" type="Script" id=17]
+[ext_resource path="res://src/sound/level_5.wav" type="AudioStream" id=18]
 
 [node name="Level_5" type="Node2D"]
+script = ExtResource( 17 )
 
 [node name="Parallax_Background_L1" type="ParallaxBackground" parent="."]
 
@@ -157,3 +160,7 @@ position = Vector2( 136, -160 )
 
 [node name="Enemy5" parent="Fall_Death" instance=ExtResource( 16 )]
 position = Vector2( 488, -160 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 18 )
+autoplay = true

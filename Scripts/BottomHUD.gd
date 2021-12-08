@@ -38,16 +38,3 @@ func _input(ev):
 # Update the texture of the power element
 func Update_ElementPicture(path):
 	$Power.texture = load(path)
-
-# Update the exp bar with a value.
-# Value is the add percentage.
-# Exemple: If value = 10% and ExpBarValue = 20%. In the function ExpBarValue become 30%
-func Update_ExpBar(value):
-	ExpBarValue += value
-	if ExpBarValue > 100:
-		ExpBarValue -= 100
-	$Exp_Bar.scale.x = (ExpBarValue/100.0)
-	
-# Get the value of the experience bar in percentage
-func Get_ExpBar():
-	return ExpBarValue

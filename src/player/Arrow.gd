@@ -6,6 +6,8 @@ var direction = 1
 
 export (int) var damage := 10
 
+onready var player = get_node("/root/" + get_tree().current_scene.name + "/Player")
+
 func set_arrow_direction(dir):
 	direction = dir
 	if dir == -1:
@@ -23,5 +25,7 @@ func _on_VisibilityNotifier2D_screen_exited() -> void:
 
 func _on_Fireball_body_entered(body: Node) -> void:
 	if body.has_method("handle_hit"):
+		if player:
+			player.get_node("HUD/Lives").Update_ManaBar(10)
 		body.handle_hit(damage)
 	queue_free()

@@ -70,4 +70,6 @@ func _on_Timer_timeout():
 			$Sentence_9.startAnimation()
 			timer.set_wait_time( 15 )
 			counter += 1
+		8:
+			get_tree().change_scene("res://src/Levels/Level_1.tscn")
 	timer.start()
