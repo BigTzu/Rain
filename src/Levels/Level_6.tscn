@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://assets/Backgrounds/Stones/Layers/2.png" type="Texture" id=1]
 [ext_resource path="res://src/Tilemap/Level_6/Decor.tres" type="TileSet" id=2]
@@ -7,10 +7,12 @@
 [ext_resource path="res://assets/Backgrounds/Stones/Layers/7.png" type="Texture" id=5]
 [ext_resource path="res://src/player/Player.tscn" type="PackedScene" id=6]
 [ext_resource path="res://assets/Backgrounds/Stones/Layers/1.png" type="Texture" id=7]
-[ext_resource path="res://src/Interface/HUD.tscn" type="PackedScene" id=8]
+[ext_resource path="res://src/Next_Level.tscn" type="PackedScene" id=8]
 [ext_resource path="res://assets/Backgrounds/Stones/Layers/3.png" type="Texture" id=9]
 [ext_resource path="res://assets/Backgrounds/Stones/Layers/5.png" type="Texture" id=10]
 [ext_resource path="res://assets/Backgrounds/Stones/Layers/4.png" type="Texture" id=11]
+[ext_resource path="res://src/Fall_Death.tscn" type="PackedScene" id=12]
+[ext_resource path="res://src/Enemies/Mushroom.tscn" type="PackedScene" id=13]
 
 [node name="Level_6" type="Node2D"]
 
@@ -85,8 +87,6 @@ scale = Vector2( 0.4, 0.4 )
 texture = ExtResource( 7 )
 centered = false
 
-[node name="HUD" parent="." instance=ExtResource( 8 )]
-
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = ExtResource( 4 )
 cell_size = Vector2( 32, 32 )
@@ -102,4 +102,28 @@ format = 1
 tile_data = PoolIntArray( 4981261, 6, 0, 5505134, 8, 0, 5505269, 8, 0, 5571046, 5, 0, 5702328, 0, 0, 5898257, 3, 0, 5898512, 4, 0, 6029354, 6, 0, 6029382, 9, 0, 6029503, 9, 0, 6029523, 6, 0, 6029708, 8, 0, 6029732, 9, 0, 6029748, 6, 0, 6029858, 9, 0, 6029884, 8, 0, 6029915, 6, 0, 6029975, 9, 0, 6030002, 6, 0, 6030015, 8, 0, 6160377, 5, 0, 6094941, 7, 0, 6095028, 7, 0, 6095494, 5, 0, 6291704, 1, 0, 6619137, 1, 0, 6619601, 2, 0, 6684759, 2, 0, 6685247, 2, 0, 6685273, 2, 0, 6750263, 2, 0, 6750435, 2, 0, 6750604, 1, 0, 6750605, 1, 0, 6750614, 2, 0, 6750622, 1, 0, 6750857, 1, 0, 6750914, 2, 0, 6815747, 2, 0, 6815778, 1, 0, 6815947, 2, 0, 6815964, 1, 0, 6815988, 1, 0, 6816171, 1, 0, 6946796, 1, 0, 6881346, 1, 0, 6881465, 1, 0, 6881897, 1, 0, 6881914, 2, 0, 6881949, 1, 0, 6881960, 2, 0, 6947089, 1, 0, 6947259, 2, 0 )
 
 [node name="Player" parent="." instance=ExtResource( 6 )]
-position = Vector2( 71, 192 )
+position = Vector2( 32, 368 )
+
+[node name="NextLevel" parent="." instance=ExtResource( 8 )]
+position = Vector2( 2800, 376 )
+
+[node name="Fall_Death" parent="." instance=ExtResource( 12 )]
+position = Vector2( 2368, 480 )
+
+[node name="Enemy" parent="." instance=ExtResource( 13 )]
+position = Vector2( 536, 296 )
+
+[node name="Enemy2" parent="." instance=ExtResource( 13 )]
+position = Vector2( 856, 352 )
+
+[node name="Enemy3" parent="." instance=ExtResource( 13 )]
+position = Vector2( 1208, 344 )
+
+[node name="Enemy4" parent="." instance=ExtResource( 13 )]
+position = Vector2( 1720, 360 )
+
+[node name="Enemy5" parent="." instance=ExtResource( 13 )]
+position = Vector2( 2088, 296 )
+
+[node name="Enemy6" parent="." instance=ExtResource( 13 )]
+position = Vector2( 2504, 352 )
