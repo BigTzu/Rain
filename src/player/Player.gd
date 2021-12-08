@@ -97,6 +97,8 @@ func dead():
 	$AnimationTree.active = false
 	$AnimationPlayer.play("Death")
 	is_dead = true
+	yield(get_tree().create_timer(2), "timeout")
+	get_tree().reload_current_scene()
 
 func handle_hit_player(damage):
 	health -= damage
