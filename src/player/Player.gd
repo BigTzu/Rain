@@ -53,8 +53,13 @@ func player_movement():
 			state_machine.travel("attack_archer")
 		return
 	if Input.is_action_just_pressed("big_attack") and is_animation_attack_possible(current):
-		state_machine.travel("attack2 2")
-		return
+		if $HUD/Lives.Get_ManaBar() == 100:
+			if weapon == 0:
+				state_machine.travel("attack2")
+			elif weapon == 1:
+				state_machine.travel("attack_glove2")
+			$HUD/Lives.Reset_ManaBar()
+			return
 	if Input.is_action_pressed("right"):
 		motion.x += ACCEL
 		if $Sprite.flip_h != false:
@@ -96,16 +101,11 @@ func dead():
 func handle_hit_player(damage):
 	health -= damage
 	state_machine.travel("Hit")
-	if health < 10:
-		$HUD/Lives/Live_1.visible = false
-	elif health < 20:
-		$HUD/Lives/Live_2.visible = false
-	else:
-		$HUD/Lives/Live_3.visible = false
-	print("enemy was hit, current health: " + str(health))
+	$HUD/Lives.RemoveLive()
 	if health <= 0:
 		dead()
 
 func _on_Area2D_body_entered(body: Node) -> void:
 	if body.has_method("handle_hit"):
+		$HUD/Lives.Update_ManaBar(10)
 		body.handle_hit(damage)
