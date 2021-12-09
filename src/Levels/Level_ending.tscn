@@ -29,8 +29,8 @@ margin_top = 293.0
 margin_right = 667.0
 margin_bottom = 324.0
 bbcode_enabled = true
-bbcode_text = "gg wp man"
-text = "gg wp man"
+bbcode_text = "              The King has been defeated ..."
+text = "              The King has been defeated ..."
 fit_content_height = true
 script = ExtResource( 2 )
 __meta__ = {
@@ -44,8 +44,8 @@ margin_top = 282.0
 margin_right = 667.0
 margin_bottom = 316.0
 bbcode_enabled = true
-bbcode_text = "damn..."
-text = "damn..."
+bbcode_text = "The Hero thus, went on to be the new King of the kingdom"
+text = "The Hero thus, went on to be the new King of the kingdom"
 fit_content_height = true
 script = ExtResource( 2 )
 __meta__ = {
@@ -59,8 +59,8 @@ margin_top = 265.0
 margin_right = 629.0
 margin_bottom = 314.0
 bbcode_enabled = true
-bbcode_text = "you kinda look sexy"
-text = "you kinda look sexy"
+bbcode_text = "Ensuring peace and prosperity to his subjects"
+text = "Ensuring peace and prosperity to his subjects"
 script = ExtResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -73,8 +73,8 @@ margin_top = 267.0
 margin_right = 667.0
 margin_bottom = 331.0
 bbcode_enabled = true
-bbcode_text = "Drinking this potion have consequence. The king who drank it was affected by excruciating pain in all his body, so much so that it was impossible for him to stand up, let alone walk."
-text = "Drinking this potion have consequence. The king who drank it was affected by excruciating pain in all his body, so much so that it was impossible for him to stand up, let alone walk."
+bbcode_text = "And they all lived happily ever after..."
+text = "And they all lived happily ever after..."
 script = ExtResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -83,68 +83,12 @@ __meta__ = {
 [node name="Sentence_5" type="RichTextLabel" parent="Panel"]
 visible = false
 margin_left = 355.0
-margin_top = 266.5
+margin_top = 267.0
 margin_right = 667.0
-margin_bottom = 331.5
+margin_bottom = 331.0
 bbcode_enabled = true
-bbcode_text = "The pain was such that the king was going crazy, he could not stand it anymore. He then decided to spread the potion throughout his kingdom with the help of an artificial rain."
-text = "The pain was such that the king was going crazy, he could not stand it anymore. He then decided to spread the potion throughout his kingdom with the help of an artificial rain."
-script = ExtResource( 2 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Sentence_6" type="RichTextLabel" parent="Panel"]
-visible = false
-margin_left = 355.0
-margin_top = 276.0
-margin_right = 667.0
-margin_bottom = 322.0
-bbcode_enabled = true
-bbcode_text = "All of this was done in order for someone to develop the power to heal in order to heal him."
-text = "All of this was done in order for someone to develop the power to heal in order to heal him."
-script = ExtResource( 2 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Sentence_7" type="RichTextLabel" parent="Panel"]
-visible = false
-margin_left = 355.0
-margin_top = 269.0
-margin_right = 667.0
-margin_bottom = 329.0
-bbcode_enabled = true
-bbcode_text = "The inhabitants began to develop powers, but also to die. Some could not stand the effects of the potion, and their bodies eventually failed."
-text = "The inhabitants began to develop powers, but also to die. Some could not stand the effects of the potion, and their bodies eventually failed."
-script = ExtResource( 2 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Sentence_8" type="RichTextLabel" parent="Panel"]
-visible = false
-margin_left = 355.0
-margin_top = 275.0
-margin_right = 667.0
-margin_bottom = 323.0
-bbcode_enabled = true
-bbcode_text = "This is where your journey begin. You incarn a young man whose artificial rain has fallen on his village."
-text = "This is where your journey begin. You incarn a young man whose artificial rain has fallen on his village."
-script = ExtResource( 2 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Sentence_9" type="RichTextLabel" parent="Panel"]
-visible = false
-margin_left = 355.0
-margin_top = 259.0
-margin_right = 667.0
-margin_bottom = 338.0
-bbcode_enabled = true
-bbcode_text = "You were safe because you were on a trip when the event occurred. Nevertheless, your family ... your friends and all the people you knew were affected.  Wishing for revenge, you decided to go in search of the king."
-text = "You were safe because you were on a trip when the event occurred. Nevertheless, your family ... your friends and all the people you knew were affected.  Wishing for revenge, you decided to go in search of the king."
+bbcode_text = "And they all lived happily ever after..."
+text = "And they all lived happily ever after..."
 script = ExtResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false

@@ -1,40 +1,10 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://src/Tilemap/tileset_mk_16_16_nature_tileset_godot.tres" type="TileSet" id=1]
 [ext_resource path="res://src/player/Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://src/Boss/FireWormBoss.tscn" type="PackedScene" id=3]
 [ext_resource path="res://src/Levels/level_logic.gd" type="Script" id=4]
-[ext_resource path="res://src/sound/boss level music.wav" type="AudioStream" id=5]
-
-[sub_resource type="Animation" id=1]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/path = NodePath(".:color")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Color( 0.0196078, 0.0196078, 0.0196078, 0 ) ]
-}
-
-[sub_resource type="Animation" id=2]
-resource_name = "fade"
-tracks/0/type = "value"
-tracks/0/path = NodePath(".:color")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 1 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Color( 0.0196078, 0.0196078, 0.0196078, 0 ), Color( 0.0196078, 0.0196078, 0.0196078, 1 ) ]
-}
+[ext_resource path="res://src/sound/boss_level_music.wav" type="AudioStream" id=5]
 
 [node name="Prototype Boss Stage" type="Node2D"]
 script = ExtResource( 4 )
@@ -61,23 +31,6 @@ modulate = Color( 0.87451, 0.145098, 0.145098, 1 )
 self_modulate = Color( 0.996078, 0.109804, 0.109804, 1 )
 position = Vector2( 217, -133 )
 scale = Vector2( 100, 100 )
-
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
-
-[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
-margin_left = -155.0
-margin_top = -235.0
-margin_right = 254.0
-margin_bottom = 1.0
-color = Color( 0.0196078, 0.0196078, 0.0196078, 0 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasLayer"]
-root_node = NodePath("../ColorRect")
-anims/RESET = SubResource( 1 )
-anims/fade = SubResource( 2 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 5 )
